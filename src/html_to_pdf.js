@@ -1,8 +1,17 @@
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 
-const htmlFilePath = 'output/html/test.html'; // Change this to your generated HTML file path
-const pdfFilePath = 'output/pdf/A3/output.pdf'; // Output PDF file path
+
+// Get the command-line arguments
+const args = process.argv.slice(2);
+
+if (args.length !== 2) {
+  console.error('Usage: node html_to_pdf.js <htmlFilePath> <xsltFilePath> <pdfFilePath>');
+  process.exit(1);
+}
+
+const htmlFilePath = args[0];
+const pdfFilePath = args[1];
 
 (async () => {
     const browser = await puppeteer.launch({ headless: 'new' });
