@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:n1="urn:oasis:names:specification:ubl:schema:xsd:Order-2" xmlns:n2="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2" xmlns:n3="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>NSO</title>
+      <style type="text/css">body { margin: 0em; text-align: center; color: #122D4E; background-repeat: repeat-x;*/ background: white; /*#efeff7;*/ } div.font1 { font-family: verdana, helvetica,sans-serif; font-size: 1em; font-weight: normal; margin-top: 0.0em; margin-right: 0em; margin-left: 0em; margin-bottom: 0em; padding: 0px; color: #122D4E; line-height: 130%; } div.font1b { font-family: verdana, helvetica,sans-serif; font-size: 1em; font-weight: bold; margin-top: 0.0em; margin-right: 0em; margin-left: 0em; margin-bottom: 0em; padding: 0px; color: #122D4E; line-height: 130%; } div.font2 { font-family: verdana, helvetica,sans-serif; font-size:0.9em; font-weight: normal; margin-top: 0.0em; margin-right: 0em; margin-left: 0em; margin-bottom: 0em; padding: 0px; color: #122D4E; line-height: 140%; } div.font7 { font-family: arial, verdana, helvetica,sans-serif; font-size: 1.3em; font-weight: bold; margin-top: 0.0em; margin-right: 0em; margin-left: 0em; margin-bottom: 0em; padding: 0px; color: #02749A; line-height: 140%; } div.font8 { font-family: arial, verdana, helvetica,sans-serif; font-size: 1.5em; font-weight: bold; margin-top: 0.0em; margin-right: 0em; margin-left: 0em; margin-bottom: 0em; padding: 0px; color: #02749A; line-height: 140%; } div.font9 { font-family: arial, verdana, helvetica,sans-serif; font-size: 1.5em; font-weight: normal; margin-top: 0.0em; margin-right: 0em; margin-left: 0em; margin-bottom: 0em; padding: 0px; color: #122D4E; line-height: 140%; } div.footer { font-family: verdana, helvetica,sans-serif; font-size: 1.3em; font-style: oblique; width: 68em; text-align: center; margin-left: auto; margin-right: auto; margin-top: 1em; color: #122D4E; border-top: 0.1em solid #02749A; border-top-style:dotted; line-height: 130%; } div.ordercontent { border: 0.0em solid #02749A; border-top: 0.1em solid #02749A; background-color: white; width: 68em; text-align: left; margin-left: auto; margin-right: auto; margin-top: 1em; } div.columnname { margin-left: 0px; margin-right: 0px; margin-top: 0.1em; margin-bottom: 0.6em; padding-left: 0.15em; /* background: white; */ font-style: normal; font-size: 0.9em; color: #122D4E; background-repeat: repeat-x; } div.columnname2 { /*margin-left: 0px; margin-right: 0px; margin-top: 0.0em; margin-bottom: 0.0em; padding-left: 0.0em; */ /* background: white; */ font-style: normal; font-weight: bold; font-size: 1.0em; color: #122D4E; } div.columnname3 { margin-left: 0px; margin-right: 0px; margin-top: 0.1em; margin-bottom: 0.6em; padding-left: 0.0em; /* background: white; */ font-style: normal; font-size: 0.9em; color: #122D4E; background-repeat: repeat-x; } div.columnnamebold { margin-left: 0px; margin-right: 0px; margin-top: 0em; margin-bottom: 0.2em; padding-left: 0.15em; /* background: white; */ font-style: normal; font-weight: bold; font-size: 1.2em; color: #122D4E; background-repeat: repeat-x; } div.leftparties { width: 33.8em; height: auto; padding: 0.2em; margin-right : 2.0em; margin-bottom : 0.6em; border: 0.1em solid #02749A; background: #A6A8AB; overflow: hidden; } div.leftheader { float: left; width: 34em; height: auto; margin-right : 2.5em; } div.rightheader { /* background-color: blue;*/ height: auto; padding: 0,2em; margin-bottom : 0.6em; line-height: 150%; overflow: hidden; } div.orderdate { float: left; height: 4.8em; width: 14.8em; padding: 0em; padding-left: 0.2em; margin-right: 1em; line-height: 150%; border: 0.1em solid #02749A; overflow: hidden; background: #A6A8AB; } div.duepayment { float: left; height: 4.8em; width: 14.8em; padding: 0em; padding-left: 0.2em; line-height: 150%; border: 0.1em solid #02749A; overflow: hidden; background: #A6A8AB; } div.ordertime { float: left; height: 3em; width: 14.8em; margin-right: 1em; padding: 0em; padding-left: 0.2em; text-align: center; overflow: hidden; } div.ordercurrency { float: left; height: 3em; width: 14.8em; padding: 0em; padding-left: 0.2em; text-align: right; overflow: hidden; } div.rightinfo { width: 30.5em; height: auto; padding: 0.2em; padding-left: 0.5em; border: 0.1em solid #02749A; overflow: hidden; } div.rightorderheader { text-align: right; height: 8.5em; padding: 0.2em; line-height: 150%; overflow: hidden; } div.orderline { /* background-color: lime;*/ margin: 0; padding: 0.0em; border-bottom: 0.0em solid #02749A; } div.ListItem { padding: 0em; overflow: hidden; font-size: 1.2em; } .hdrcol22 { background-color: #A6A8AB; font-family: arial, verdana, helvetica,sans-serif; font-size: 0.9em; border-bottom: 1px solid #02749A; font-weight: bold; } .hdrcol23 { /*background-color: white;*/ font-family: arial, verdana, helvetica,sans-serif; font-size: 1.1em; } .hdrcol234 { background-color: white; font-family: arial, verdana, helvetica,sans-serif; font-size: 0.9em; border-bottom: 0.05em solid #02749A; } .hdrcol25 { background-color: #B5D5FB; font-family: arial, verdana, helvetica,sans-serif; font-size: 0.9em; font-weight: bold; } .hdrcolSmall { background-color: white; font-family: arial, verdana, helvetica,sans-serif; font-size: 0.9em; } .font9 { font-family: arial, verdana, helvetica,sans-serif; font-size: 0.9em; font-weight: normal; color: #122D4E; } .ntable { border-collapse: collapse; border: 1px solid #02749A; } .ntableMainRow { background: #ECEDEE; border-top: 1px solid #02749A; } .ntable2 { border-collapse: collapse; border: 1px solid #02749A; } .ntable2 tr { background: white; } .ntable2 tr:nth-child(odd) { background: white; } .ntable2 tr:nth-child(odd) { background: #ECEDEE; } .ntablenoborder { background-color: white; border-collapse: collapse; border: 0px solid #02749A; margin: 0em; padding: 0em; } /* table-layout: fixed */ div.otherinfo { border: 0.0em solid #02749A; background-color: white; width: 68em; text-align: left; margin-left: auto; margin-right: auto; margin-top: 1em; margin-bottom: 1em; /*page-break-before: always; */ } div.headingBig { padding-top: 0.8em; padding-bottom: 0.4em; padding-left: 0.4em; padding-right: 0.0em; text-align: left; font-size: 1.4em; font-weight: bold; font-family: arial, verdana, helvetica,sans-serif; color: #02749A; } div.floatbox { vertical-align: text-top; height: auto; width: 68em; overflow: off; } div.minifloat { vertical-align: text-top; font-size: 1.2em; height: auto; width: 26em; border: 0.1em solid #02749A; padding: 0.2em; padding-left: 0.5em; } div.invoicee { vertical-align: text-top; float: left; margin-right: 2.5em; } div.originator { vertical-align: text-top; float: right; } div.delivery { vertical-align: text-top; width: 68em; padding: 0.2em; border: 0.1em solid #02749A; background: #A6A8AB; } div.leftdelivery { vertical-align: text-top; width: 32em; padding: 0.2em; padding-left: 0.5em; float: left; } div.rightdelivery { vertical-align: text-top; width: 32em; padding: 0.2em; float: right; } .clear { clear: both; }</style>
+   </head>
+   <body>
+      <div class="font8">Busta SBDH
+			<br>
+			Mittente:
+			0201:uf6wx8<br>
+			Destinatario
+			0211:it09012850153</div>
+      <p id="ordercontent" class="ordercontent">
+         <div id="header">
+            <div id="mainheader">
+               <div id="orderheader" class="rightorderheader">
+                  <div>
+                     <div class="font2"> </div>
+                     <div class="font2"> </div>
+                     <div class="font8">ORDINE
+				</div>
+                     <div class="font7">Identificativo del documento: 
+				904-ECCD23-4817</div>
+                  </div>
+               </div>
+            </div>
+            <div id="topheader">
+               <div class="leftheader">
+                  <div id="parties" class="leftparties">
+                     <div class="columnnamebold">Dati del Fornitore</div>
+                     <div style="margin-top: 0.8em; margin-left: 1.2em; line-height: 120%">
+                        <div class="ListItem"><b>Denominazione:</b><b>ZIMMER BIOMET ITALIA S.R.L.</b></div>
+                        <div class="ListItem"><b>Denominazione legale:</b>ZIMMER BIOMET ITALIA S.R.L.</div>
+                        <div class="ListItem"><b>Indirizzo</b><br>VIA SAN BOVIO, 3
+						 
+					</div>
+                        <div class="ListItem">20090
+						 
+					SEGRATE
+						,
+					MI
+						,
+					IT</div>
+                        <div class="ListItem"><b>Endpoint:</b>0211
+						:
+					IT09012850153</div>
+                        <div class="ListItem"><b>Contatti:</b>ZIMMER BIOMET ITALIA S.R.L.</div>
+                        <div class="ListItem"><b>E-mail:</b>arit@zimmerbiomet.com</div>
+                        <div class="ListItem"><b>Tel:</b>02516261</div>
+                        <div class="ListItem"><b>Altri dati legali:</b></div>
+                        <div class="ListItem">09012850153</div>
+                        <div class="ListItem"><b>Ulteriori indicazioni:</b>IT09012850153</div>
+                     </div>
+                  </div>
+                  <div id="parties" class="leftparties">
+                     <div class="columnnamebold">Dati del Cliente</div>
+                     <div style="margin-top: 0.8em; margin-left: 1.2em; line-height: 120%">
+                        <div class="ListItem"><b>Denominazione:</b><b>Azienda AOU di Modena</b></div>
+                        <div class="ListItem"><b>Denominazione legale:</b>Azienda AOU di Modena</div>
+                        <div class="ListItem"><b>Indirizzo</b><br>Via del Pozzo 71
+						 
+					</div>
+                        <div class="ListItem">41124
+						 
+					MODENA
+						,
+					MO
+						,
+					IT</div>
+                        <div class="ListItem"><b>Id. fiscale:</b>IT02241740360</div>
+                        <div class="ListItem"><b>Endpoint:</b>0201
+						:
+					UF6WX8</div>
+                        <div class="ListItem"><b>Contatti:</b>VOLPE MARGHERITA</div>
+                        <div class="ListItem"><b>E-mail:</b>volpe.margherita@aou.mo.it</div>
+                        <div class="ListItem"><b>Altri dati legali:</b></div>
+                        <div class="ListItem">02241740360</div>
+                        <div class="ListItem">MODENA
+							,
+							IT</div>
+                     </div>
+                  </div>
+               </div>
+               <div id="sumheader" class="rightheader">
+                  <div id="orderdate" class="orderdate">
+                     <div class="columnnamebold">Data emissione Documento</div>
+                     <div class="font9" style="text-align: center;">2023-06-30</div>
+                  </div>
+                  <div id="duepayment" class="duepayment">
+                     <div class="columnnamebold">Totale da pagare</div>
+                     <div class="font9" style="text-align: center;">55,91</div>
+                  </div>
+                  <div id="ordertime" class="ordertime"></div>
+                  <div id="ordercurrency" class="ordercurrency">
+                     <div class="font1" style="text-align: right; display: inline"><b>Valuta Documento: </b>EUR
+					 
+				</div>
+                  </div><br><div id="orderinfo" class="rightinfo">
+                     <div class="font1" style="display: inline"></div><br><br><div class="font1b" style="display: inline">Tipo di Ordinazione:</div>
+                     <div class="font1" style="display: inline">220</div>
+                     <div class="font1" style="display: inline">
+                        <div class="font1" style="display: inline">- Ordinazione di acquisto</div>
+                     </div><br><div class="font1b" style="display: inline">Data scadenza Ordine:</div>
+                     <div class="font1" style="display: inline">2023-09-28</div><br><div class="font1b" style="display: inline">Codice Identificativo Gara:</div>
+                     <div class="font1" style="display: inline">ZFA21A16B0</div><br><div class="font1b" style="display: inline">Identificativo del contratto:</div>
+                     <div class="font1" style="display: inline">904-2018-409</div>
+                  </div>
+               </div>
+               <p class="clear"></p>
+            </div>
+         </div>
+         <p class="clear"></p>
+         <div> </div>
+         <p id="orderline" class="orderline">
+            <table width="100%" cellspacing="0" cellpadding="3" class="ntable" summary="Order lines">
+               <tr height="25">
+                  <td width="4%" class="hdrcol22" align="left">ID linea</td>
+                  <td width="6%" class="hdrcol22" align="left">ID attribuito
+						<br>
+						dal fornitore
+					</td>
+                  <td width="40%" class="hdrcol22" align="left">Denominazione bene/servizio</td>
+                  <td width="6%" class="hdrcol22" align="center">Quantità
+						<br>
+						(Q.tà effettiva)
+					</td>
+                  <td width="6%" class="hdrcol22" align="center">UdM</td>
+                  <td width="6%" class="hdrcol22" align="center">Prezzo unitario*</td>
+                  <td width="11%" class="hdrcol22" align="center">Importo linea</td>
+                  <td width="10%" class="hdrcol22" align="center">Sconti
+						<br>
+						Maggiorazioni
+					</td>
+                  <td width="11%" class="hdrcol22" align="center">IVA %</td>
+               </tr>
+               <tr class="ntableMainRow" data-breakable="">
+                  <td width="4%" valign="top" align="right" class="hdrcol23">1
+							. 
+						</td>
+                  <td width="6%" valign="top" align="left" class="hdrcol23">1312-18-022</td>
+                  <td width="40%" valign="top" align="left" class="hdrcol23">PROT OSTEOSINT VITE OSTEOSINT CORTICALE_ALPS VITE CORTIC LP 3,5X22MM_131218022_BIOMET ITALIA Srl</td>
+                  <td width="6%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">1,00
+							 
+							</td>
+                  <td width="6%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">Unità</td>
+                  <td width="6%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">17,919</td>
+                  <td width="11%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">17,92</td>
+                  <td width="10%" valign="top" align="center" class="hdrcol23" nowrap="nowrap"></td>
+                  <td width="11%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">4,00
+							 
+						</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Note alla linea d'ordine:</b>Rif.Documento: 303420973 del 17/03/2023 Lotto: 65682088 - 31/12/2099</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Classificazione contabile:</b>BA0220</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Riferimenti a ulteriore documentazione:</b>DDT:303420973
+										//
+									</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Identificativo attribuito dal cliente:</b>1031301</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Classificazione bene/servizio:</b>P09120601
+									 
+									STO
+									 
+									UNCL7143
+									//
+								DM1:889816
+									 
+									ZZZ
+									 
+									
+									//
+								</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Ulteriori proprietà:</b><table summary="Additional property" border="0" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                           <td height="5px" valign="up" align="left" class="hdrcol23"><b>+</b></td>
+                           <td width="98%" valign="bottom" align="left" class="hdrcol23">Denominazione proprietà:
+												PackSizeNumeric
+												:
+												1
+												 
+												<i>valore proprietà</i></td>
+                        </tr>
+                     </table>
+                  </td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Specificazioni bene/servizio:</b><table summary="Additional property" border="0" width="100%" cellpadding="0" cellspacing="0">
+                        <tr data-breakable="">
+                           <td height="5px" valign="up" align="left" class="hdrcol23"><b>+</b></td>
+                           <td width="98%" valign="bottom" align="left" class="hdrcol23">(
+													<i>Numero del lotto:</i>65682088
+													)
+												</td>
+                        </tr>
+                     </table>
+                  </td>
+               </tr>
+               <tr class="ntableMainRow" data-breakable="">
+                  <td width="4%" valign="top" align="right" class="hdrcol23">2
+							. 
+						</td>
+                  <td width="6%" valign="top" align="left" class="hdrcol23">1312-18-022</td>
+                  <td width="40%" valign="top" align="left" class="hdrcol23">PROT OSTEOSINT VITE OSTEOSINT CORTICALE_ALPS VITE CORTIC LP 3,5X22MM_131218022_BIOMET ITALIA Srl</td>
+                  <td width="6%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">1,00
+							 
+							</td>
+                  <td width="6%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">Unità</td>
+                  <td width="6%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">17,919</td>
+                  <td width="11%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">17,92</td>
+                  <td width="10%" valign="top" align="center" class="hdrcol23" nowrap="nowrap"></td>
+                  <td width="11%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">4,00
+							 
+						</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Note alla linea d'ordine:</b>Rif.Documento: 303502263 del 14/06/2023 Lotto: 65790347 - 31/12/2099</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Classificazione contabile:</b>BA0220</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Riferimenti a ulteriore documentazione:</b>DDT:303502263
+										//
+									</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Identificativo attribuito dal cliente:</b>1031301</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Classificazione bene/servizio:</b>P09120601
+									 
+									STO
+									 
+									UNCL7143
+									//
+								DM1:889816
+									 
+									ZZZ
+									 
+									
+									//
+								</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Ulteriori proprietà:</b><table summary="Additional property" border="0" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                           <td height="5px" valign="up" align="left" class="hdrcol23"><b>+</b></td>
+                           <td width="98%" valign="bottom" align="left" class="hdrcol23">Denominazione proprietà:
+												PackSizeNumeric
+												:
+												1
+												 
+												<i>valore proprietà</i></td>
+                        </tr>
+                     </table>
+                  </td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Specificazioni bene/servizio:</b><table summary="Additional property" border="0" width="100%" cellpadding="0" cellspacing="0">
+                        <tr data-breakable="">
+                           <td height="5px" valign="up" align="left" class="hdrcol23"><b>+</b></td>
+                           <td width="98%" valign="bottom" align="left" class="hdrcol23">(
+													<i>Numero del lotto:</i>65790347
+													)
+												</td>
+                        </tr>
+                     </table>
+                  </td>
+               </tr>
+               <tr class="ntableMainRow" data-breakable="">
+                  <td width="4%" valign="top" align="right" class="hdrcol23">3
+							. 
+						</td>
+                  <td width="6%" valign="top" align="left" class="hdrcol23">1312-18-022</td>
+                  <td width="40%" valign="top" align="left" class="hdrcol23">PROT OSTEOSINT VITE OSTEOSINT CORTICALE_ALPS VITE CORTIC LP 3,5X22MM_131218022_BIOMET ITALIA Srl</td>
+                  <td width="6%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">1,00
+							 
+							</td>
+                  <td width="6%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">Unità</td>
+                  <td width="6%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">17,919</td>
+                  <td width="11%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">17,92</td>
+                  <td width="10%" valign="top" align="center" class="hdrcol23" nowrap="nowrap"></td>
+                  <td width="11%" valign="top" align="center" class="hdrcol23" nowrap="nowrap">4,00
+							 
+						</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Note alla linea d'ordine:</b>Rif.Documento: 303471882 del 11/05/2023 Lotto: 65712613 - 31/12/2099</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Classificazione contabile:</b>BA0220</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Riferimenti a ulteriore documentazione:</b>DDT:303471882
+										//
+									</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Identificativo attribuito dal cliente:</b>1031301</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Classificazione bene/servizio:</b>P09120601
+									 
+									STO
+									 
+									UNCL7143
+									//
+								DM1:889816
+									 
+									ZZZ
+									 
+									
+									//
+								</td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Ulteriori proprietà:</b><table summary="Additional property" border="0" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                           <td height="5px" valign="up" align="left" class="hdrcol23"><b>+</b></td>
+                           <td width="98%" valign="bottom" align="left" class="hdrcol23">Denominazione proprietà:
+												PackSizeNumeric
+												:
+												1
+												 
+												<i>valore proprietà</i></td>
+                        </tr>
+                     </table>
+                  </td>
+               </tr>
+               <tr data-breakable="">
+                  <td></td>
+                  <td colspan="8" class="hdrcol23"><b>Specificazioni bene/servizio:</b><table summary="Additional property" border="0" width="100%" cellpadding="0" cellspacing="0">
+                        <tr data-breakable="">
+                           <td height="5px" valign="up" align="left" class="hdrcol23"><b>+</b></td>
+                           <td width="98%" valign="bottom" align="left" class="hdrcol23">(
+													<i>Numero del lotto:</i>65712613
+													)
+												</td>
+                        </tr>
+                     </table>
+                  </td>
+               </tr>
+            </table>
+         </p>
+         <table width="100%" cellspacing="0" cellpadding="0" summary="Totale ordine">
+            <tr data-breakable="">
+               <td width="4%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="52%" class="hdrcol23" align="left">
+                  <div class="hdrcolSmall" align="left" nowrap="nowrap">N° di linee:
+						3
+						       *Prezzo unitario IVA esclusa.
+					</div>
+               </td>
+               <td width="13%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="13%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="13%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+            </tr>
+            <tr data-breakable="">
+               <td width="4%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="13%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="13%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="20%" class="hdrcol23" align="right" nowrap="nowrap"><b>Totale delle linee d'ordine:</b></td>
+               <td width="11%" class="hdrcol23" align="right" nowrap="nowrap">53,76</td>
+            </tr>
+            <tr data-breakable="">
+               <td width="4%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="13%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="13%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="20%" class="hdrcol23" align="right" nowrap="nowrap">Importo al lordo IVA:</td>
+               <td width="11%" class="hdrcol23" align="right" nowrap="nowrap">55,91</td>
+            </tr>
+            <tr data-breakable="">
+               <td valign="top" align="right" class="hdrcol23" nowrap="nowrap"> </td>
+               <td valign="top" align="left" class="hdrcol23"> </td>
+               <td valign="top" align="right" class="hdrcol23" nowrap="nowrap"> </td>
+               <td valign="top" align="right" class="hdrcol23" nowrap="nowrap"><b>Imposta totale:</b></td>
+               <td valign="top" align="right" class="hdrcol23" nowrap="nowrap">2,15</td>
+            </tr>
+            <tr data-breakable="">
+               <td width="4%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="13%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="13%" class="hdrcol23" align="right" nowrap="nowrap"> </td>
+               <td width="20%" class="hdrcol23" align="right" nowrap="nowrap">Importo al netto IVA:</td>
+               <td width="11%" class="hdrcol23" align="right" nowrap="nowrap">53,76</td>
+            </tr>
+            <tr data-breakable="">
+               <td valign="top" align="right" class="hdrcol23" nowrap="nowrap"> </td>
+               <td valign="top" align="left" class="hdrcol23"> </td>
+               <td valign="top" align="right" class="hdrcol23" nowrap="nowrap"> </td>
+               <td valign="top" align="right" class="hdrcol234" nowrap="nowrap"> </td>
+               <td valign="top" align="right" class="hdrcol234" nowrap="nowrap"> </td>
+            </tr>
+            <tr data-breakable="">
+               <td valign="top" align="right" class="hdrcol23" nowrap="nowrap"> </td>
+               <td valign="top" align="left" class="hdrcol23"> </td>
+               <td valign="top" align="right" class="hdrcol23" nowrap="nowrap"> </td>
+               <td valign="top" align="right" class="hdrcol23" nowrap="nowrap"><b>Ammontare da pagare:</b></td>
+               <td valign="top" align="right" class="hdrcol23" nowrap="nowrap"><b>55,91</b></td>
+            </tr>
+         </table>
+         <p class="clear"></p>
+      </p>
+      <div id="otherinfo" class="ordercontent">
+         <div id="other" class="otherinfo">
+            <div class="headingBig">Informazioni sulla consegna</div>
+            <div class="delivery">
+               <div class="leftdelivery">
+                  <div class="ListItem"><b>Identificativo del luogo:</b>02241740360-9040ECOB</div>
+                  <div class="ListItem"><b>Indirizzo</b><br>VIA DEL POZZO 71
+								 
+							</div>
+                  <div class="ListItem">41124
+								 
+							MODENA
+								, 
+							MO
+								, 
+							IT</div>
+                  <div class="ListItem"></div>
+               </div>
+               <div class="rightdelivery">
+                  <div class="ListItem"><b>Denominazione del beneficiario:</b>MAGAZZINO ECO - C/DEPOSITO BAGGIOVARA</div>
+                  <div class="ListItem"></div>
+                  <div class="ListItem"><b>Istruzioni particolari dell'Ordinazione</b></div>
+                  <div class="ListItem"><b>Sotto-tipo di Ordinazione:</b>OFR</div>
+                  <div class="font1" style="display: inline">
+                     <div class="font1" style="display: inline">- Ordinazione di fatturazione e reintegro</div>
+                  </div>
+               </div>
+               <p class="clear"></p>
+            </div><br><div class="floatbox">
+               <div class="invoicee">
+                  <div class="headingBig">Intestatario della Fattura</div>
+                  <div class="minifloat">
+                     <div><b>Denominazione:</b>Azienda AOU di Modena</div>
+                     <div><b>Denominazione legale intestatario fattura:</b></div>
+                     <div>Azienda AOU di Modena</div>
+                     <div><b>Indirizzo:</b><br>Via del Pozzo 71
+									 
+								</div>
+                     <div>41124
+									 
+								MODENA
+									,
+								MO
+									,
+								IT</div>
+                     <div><b>Id. fiscale:</b>IT02241740360</div>
+                     <div><b>Altri dati legali:</b></div>
+                     <div>02241740360</div>
+                     <div>MODENA
+									,
+									IT</div>
+                     <div><b>Endpoint:</b>0201
+								:
+								UF6WX8</div>
+                  </div>
+               </div>
+            </div>
+            <p class="clear"></p>
+            <table>
+               <tr height="10">
+                  <td></td>
+               </tr>
+            </table>
+            <div class="headingBig">Documenti addizionali</div>
+            <table class="ntable" cellpadding="1" cellspacing="1" width="100%" summary="Attachment" border="0">
+               <tr height="25">
+                  <td width="10%" class="hdrcol22" align="left">  ID.</td>
+                  <td width="18%" class="hdrcol22" align="left">Tipo documento</td>
+                  <td width="42%" class="hdrcol22" align="left">Collegamento esterno</td>
+                  <td width="15%" class="hdrcol22" align="left">Nome file</td>
+                  <td width="15%" class="hdrcol22" align="left">Codice mime</td>
+               </tr>
+               <tr height="25">
+                  <td class="hdrcol23" align="left" nowrap="nowrap">  
+							ECCD23-8453
+							.
+						</td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap">DDT</td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"><a href="data:;base64," download="" title="download del file "></a></td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"></td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"></td>
+               </tr>
+               <tr height="25">
+                  <td class="hdrcol23" align="left" nowrap="nowrap">  
+							ECCD23-8453
+							.
+						</td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap">DDT</td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"><a href="data:;base64," download="" title="download del file "></a></td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"></td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"></td>
+               </tr>
+               <tr height="25">
+                  <td class="hdrcol23" align="left" nowrap="nowrap">  
+							ECCD23-8453
+							.
+						</td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap">DDT</td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"><a href="data:;base64," download="" title="download del file "></a></td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"></td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"></td>
+               </tr>
+               <tr height="25">
+                  <td class="hdrcol23" align="left" nowrap="nowrap">  
+							2018-01-23-57/18 LOTTO 30
+							.
+						</td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap">DELIBERA</td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"><a href="data:;base64," download="" title="download del file "></a></td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"></td>
+                  <td class="hdrcol23" align="left" nowrap="nowrap"></td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div style="margin-top: 2em;"></div>
+      <div id="footer" class="footer"><br><b>Tipo Documento:</b>urn:fdc:peppol.eu:poacc:trns:order:3:restrictive:urn:www.agid.gov.it:trns:ordine:3.1<br><b>Tipo Processo:</b>urn:fdc:peppol.eu:poacc:bis:order_only:3<br><br></div>
+   </body>
+</html>

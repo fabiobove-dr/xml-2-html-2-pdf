@@ -1,2 +1,6 @@
-lib
-node_modules
+
+node_modules/*
+samples/*
+output/pdf/A3/*
+outpuf/html/*
+xslt/*

@@ -6,7 +6,7 @@ const puppeteer = require('puppeteer');
 const args = process.argv.slice(2);
 
 if (args.length !== 2) {
-  console.error('Usage: node html_to_pdf.js <htmlFilePath> <xsltFilePath> <pdfFilePath>');
+  console.error('Usage: node html_to_pdf.js <htmlFilePath> <pdfFilePath>');
   process.exit(1);
 }
 
