@@ -2,5 +2,5 @@
 node_modules/*
 samples/*
 output/pdf/A3/*
-outpuf/html/*
+output/html/*
 xslt/*
